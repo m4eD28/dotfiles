@@ -22,6 +22,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Townk/vim-autoclose')
  call dein#add('tpope/vim-commentary')
  call dein#add('bronson/vim-trailing-whitespace')
+ call dein#add('scrooloose/syntastic.git')
  " call dein#add('Yggdroot/indentLine')
  " call dein#add('junegunn/vim-easy-align')
 
