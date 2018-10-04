@@ -22,7 +22,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Townk/vim-autoclose')
  call dein#add('tpope/vim-commentary')
  call dein#add('bronson/vim-trailing-whitespace')
- call dein#add('scrooloose/syntastic.git')
+ " call dein#add('scrooloose/syntastic.git')
  " call dein#add('Yggdroot/indentLine')
  " call dein#add('junegunn/vim-easy-align')
 
@@ -52,14 +52,15 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syantasic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syantasic_check_on_wq = 0
+
 " let g:indentLine_setColors = 0
 
 if dein#check_install()
