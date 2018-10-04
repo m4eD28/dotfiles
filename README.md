@@ -1,2 +1,1 @@
-# dotfiles
-自分用の
+# 自分用dotfiles
