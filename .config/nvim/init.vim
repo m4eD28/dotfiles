@@ -22,9 +22,6 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Townk/vim-autoclose')
  call dein#add('tpope/vim-commentary')
  call dein#add('bronson/vim-trailing-whitespace')
- " call dein#add('scrooloose/syntastic.git')
- " call dein#add('Yggdroot/indentLine')
- " call dein#add('junegunn/vim-easy-align')
 
  call dein#end()
  call dein#save_state()
@@ -51,17 +48,6 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
-" Syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syantasic_check_on_wq = 0
-
-" let g:indentLine_setColors = 0
 
 if dein#check_install()
     call dein#install()
@@ -118,9 +104,6 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-"nnoremap <C-b> :copen<Enter>:make<Enter>
-"nnoremap <C-u> :copen<Enter>:make run<Enter>
-
 set ruler
 set encoding=utf-8
 scriptencoding=utf-8
@@ -147,4 +130,3 @@ set noshowmode
 set mouse=a
 set scrolloff=8
 set backspace=indent,eol,start
-" set whichwrap=b,s,h,l,<,>,[,],~
