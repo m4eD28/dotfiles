@@ -30,6 +30,10 @@ endif
 filetype plugin indent on
 syntax enable
 
+if dein#check_install()
+    call dein#install()
+endif
+
 "deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 0
@@ -47,11 +51,6 @@ inoremap <expr><CR>  pumvisible() ? "\<C-y>" : "\<CR>"
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
-
-
-if dein#check_install()
-    call dein#install()
-endif
 
 "auto-close
 " autocmd FileType cpp
