@@ -1,0 +1,43 @@
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
+'''
+
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  set background=dark
+  colorscheme solarized
+  let g:lightline = {
+      \ 'colorscheme': 'solarized'
+      \ }
+  set laststatus=2
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let NERDTreeShowHidden = 1
+  map <C-n> :NERDTreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+hook_add = '''
+  let g:AutoCloseExpandSpace=0
+  "autocmd FileType cpp
+  " \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
+'''
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'

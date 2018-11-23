@@ -1,0 +1,23 @@
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+depends = 'context_filetype.vim'
+hook_source = '''
+source /Users/maedar/dotfiles/.config/nvim/neosnippet.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = 'context_filetype.vim'
+on_event = 'InsertEnter'
+hook_source = '''
+source /Users/maedar/dotfiles/.config/nvim/deoplete.rc.vim
+'''
+
+[[plugins]]
+repo='prabirshrestha/async.vim'

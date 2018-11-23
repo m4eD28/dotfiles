@@ -1,79 +1,53 @@
-"dein
 if &compatible
- set nocompatible
+  set nocompatible
 endif
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
- call dein#begin('~/.cache/dein')
+set runtimepath+=/Users/maedar/.cache/dein/repos/github.com/Shougo/dein.vim
 
- if !has('nvim')
-   call dein#add('roxma/nvim-yarp')
-   call dein#add('roxma/vim-hug-neovim-rpc')
- endif
+if dein#load_state('/Users/maedar/.cache/dein')
+  call dein#begin('/Users/maedar/.cache/dein')
 
- call dein#add('~/.cache/dein')
- call dein#add('Shougo/deoplete.nvim')
- call dein#add('Shougo/neosnippet.vim')
- call dein#add('Shougo/neosnippet-snippets')
- call dein#add('itchyny/lightline.vim')
- call dein#add('scrooloose/nerdtree')
- call dein#add('Townk/vim-autoclose')
- call dein#add('tpope/vim-commentary')
- call dein#add('bronson/vim-trailing-whitespace')
+  " Let dein manage dein
+  call dein#add('/Users/maedar/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#load_toml('~/dotfiles/.config/nvim/dein.toml',{'lazy':0})
+  call dein#load_toml('~/dotfiles/.config/nvim/dein_lazy.toml',{'lazy':1})
 
- call dein#end()
- call dein#save_state()
+  call dein#end()
+  call dein#save_state()
 endif
 
 filetype plugin indent on
 syntax enable
 
 if dein#check_install()
-    call dein#install()
+  call dein#install()
 endif
 
+" " call dein#add('Shougo/deoplete.nvim')
+
 "deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 0
-let g:deoplete#auto_complete_start_length = 1
-let g:deoplete#enable_camel_case = 0
-let g:deoplete#enable_ignore_case = 0
-let g:deoplete#enable_refresh_always = 0
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#max_list = 5
-inoremap <expr><tab> pumvisible() ? "\<C-n>" :
-    \ neosnippet#expandable_or_jumpable() ?
-    \   "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
-inoremap <expr><CR>  pumvisible() ? "\<C-y>" : "\<CR>"
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-"auto-close
-" autocmd FileType cpp
-    " \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-
-"NERDTree
-let NERDTreeShowHidden = 1
-map <C-n> :NERDTreeToggle<CR>
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#auto_complete_delay = 0
+" let g:deoplete#auto_complete_start_length = 1
+" let g:deoplete#enable_camel_case = 0
+" let g:deoplete#enable_ignore_case = 0
+" let g:deoplete#enable_refresh_always = 0
+" let g:deoplete#enable_smart_case = 1
+" let g:deoplete#file#enable_buffer_path = 1
+" let g:deoplete#max_list = 5
+" inoremap <expr><tab> pumvisible() ? "\<C-n>" :
+"     \ neosnippet#expandable_or_jumpable() ?
+"     \   "\<Plug>(neosnippet_expand_or_jump)" : "\<tab>"
+" inoremap <expr><CR>  pumvisible() ? "\<C-y>" : "\<CR>"
+" imap <C-k> <Plug>(neosnippet_expand_or_jump)
+" smap <C-k> <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k> <Plug>(neosnippet_expand_target)
 
 "htmlのカッコ補完
 "augroup fileTypeIndent
 "    autocmd!
 "    autocmd BufNewFile,BufRead *.html inoremap < <><Left>
 "augroup END
-
-"lightline
-set background=dark
-colorscheme solarized
-let g:lightline = {
-    \ 'colorscheme': 'solarized'
-    \ }
-set laststatus=2
 
 "vimをクリップボード連携
 set clipboard+=unnamed
