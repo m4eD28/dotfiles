@@ -23,7 +23,7 @@ if dein#check_install()
   call dein#install()
 endif
 
-" " call dein#add('Shougo/deoplete.nvim')
+" call dein#add('Shougo/deoplete.nvim')
 
 "deoplete
 " let g:deoplete#enable_at_startup = 1
@@ -90,6 +90,8 @@ set smarttab
 set shiftround
 set hlsearch
 set showmatch
+set autoindent
+set smartindent
 set cindent
 set showcmd
 set ignorecase
