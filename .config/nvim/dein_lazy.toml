@@ -10,6 +10,9 @@ source /Users/maedar/dotfiles/.config/nvim/deoplete.rc.vim
 '''
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
@@ -17,6 +20,3 @@ depends = 'neosnippet-snippets'
 hook_source = '''
 source /Users/maedar/dotfiles/.config/nvim/neosnippet.rc.vim
 '''
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
