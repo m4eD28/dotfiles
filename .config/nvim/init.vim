@@ -63,7 +63,7 @@ scriptencoding=utf-8
 set number
 set title
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=2
 set softtabstop=0
 set expandtab
 set smarttab
@@ -71,6 +71,9 @@ set shiftround
 set hlsearch
 set showmatch
 set autoindent
+set nocindent
+set nosmartindent
+filetype indent off
 set smartindent
 set cindent
 set showcmd

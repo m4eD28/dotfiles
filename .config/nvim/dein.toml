@@ -1,27 +1,13 @@
-#[[plugins]]
-#repo = 'autozimu/LanguageClient-neovim'
-#rev = 'next'
-#build = 'bash install.sh'
-#hook_add = '''
-#  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
-#'''
-
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-  set background=dark
-  colorscheme solarized
-  let g:lightline = {
-      \ 'colorscheme': 'solarized'
-      \ }
-  set laststatus=2
+  source /Users/maedar/dotfiles/.config/nvim/Lightline.rc.vim
 '''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  let NERDTreeShowHidden = 1
-  map <C-n> :NERDTreeToggle<CR>
+source /Users/maedar/dotfiles/.config/nvim/NerdTree.rc.vim
 '''
 
 [[plugins]]
@@ -37,3 +23,11 @@ repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
+
+#[[plugins]]
+#repo = 'autozimu/LanguageClient-neovim'
+#rev = 'next'
+#build = 'bash install.sh'
+#hook_add = '''
+#  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
+#'''
