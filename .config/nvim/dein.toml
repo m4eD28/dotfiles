@@ -24,6 +24,9 @@ repo = 'tpope/vim-commentary'
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
 #[[plugins]]
 #repo = 'autozimu/LanguageClient-neovim'
 #rev = 'next'
