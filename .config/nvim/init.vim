@@ -64,18 +64,15 @@ set number
 set title
 set tabstop=4
 set shiftwidth=4
-set softtabstop=0
 set expandtab
 set smarttab
+set softtabstop=4
+set autoindent
+set smartindent
+set backspace=indent,eol,start
 set shiftround
 set hlsearch
 set showmatch
-set autoindent
-set nocindent
-set nosmartindent
-filetype indent off
-set smartindent
-set cindent
 set showcmd
 set ignorecase
 set smartcase
@@ -87,4 +84,3 @@ set nobackup
 set noshowmode
 set mouse=a
 set scrolloff=8
-set backspace=indent,eol,start

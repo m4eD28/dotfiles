@@ -27,6 +27,12 @@ repo = 'bronson/vim-trailing-whitespace'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+source /Users/maedar/dotfiles/.config/nvim/Ale.rc.vim
+'''
+
 #[[plugins]]
 #repo = 'autozimu/LanguageClient-neovim'
 #rev = 'next'
