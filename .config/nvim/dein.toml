@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-  source /Users/maedar/dotfiles/.config/nvim/Lightline.rc.vim
+source /Users/maedar/dotfiles/.config/nvim/Lightline.rc.vim
 '''
 
 [[plugins]]
