@@ -11,6 +11,7 @@ if dein#load_state('/Users/maedar/.cache/dein')
   call dein#add('/Users/maedar/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#load_toml('/Users/maedar/dotfiles/.config/nvim/dein.toml',{'lazy':0})
   call dein#load_toml('/Users/maedar/dotfiles/.config/nvim/dein_lazy.toml',{'lazy':1})
+
   call dein#end()
   call dein#save_state()
 endif

@@ -5,6 +5,7 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'Shougo/deoplete.nvim'
 depends = 'context_filetype.vim'
 on_event = 'InsertEnter'
+on_i = 1
 hook_source = '''
 source /Users/maedar/dotfiles/.config/nvim/deoplete.rc.vim
 '''
