@@ -12,5 +12,3 @@ let g:lightline = {
   \  'ale': 'ALEGetStatusLine'
   \}
 \ }
-" let g:lsp_signs_error = {'text': '✗'}
-" let g:lsp_signs_warning = {'text': '‼'}

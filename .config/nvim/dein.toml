@@ -10,6 +10,9 @@ hook_add = '''
 source /Users/maedar/dotfiles/.config/nvim/NerdTree.rc.vim
 '''
 
+#[[plugins]]
+#repo = 'cohama/lexima.vim'
+
 [[plugins]]
 repo = 'Townk/vim-autoclose'
 hook_add = '''
