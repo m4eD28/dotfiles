@@ -47,7 +47,7 @@ if has('syntax')
 endif
 
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
-nmap <F5> :!python % <Enter>
+" nmap <F5> :!python % <Enter>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
