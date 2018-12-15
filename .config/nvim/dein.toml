@@ -37,10 +37,10 @@ hook_add = '''
 source /Users/maedar/dotfiles/.config/nvim/Ale.rc.vim
 '''
 
-#[[plugins]]
-#repo = 'autozimu/LanguageClient-neovim'
-#rev = 'next'
-#build = 'bash install.sh'
-#hook_add = '''
-#  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
-#'''
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
+'''

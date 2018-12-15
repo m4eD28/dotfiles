@@ -9,26 +9,26 @@ let g:LanguageClient_serverCommands = {}
         \ 'cpp': ['clangd'],
         \ 'python': ['pyls'],
     \ }
-    " au User lsp_setup call lsp#register_server({
-    "     \ 'name': 'clangd',
-    "     \ 'cmd': {server_info->['clangd']},
-    "     \ 'whitelist': ['cpp'],
-    "     \ })
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd']},
+        \ 'whitelist': ['cpp'],
+        \ })
 " endif
 
-" if executable('pyls')
-    " let g:LanguageClient_serverCommands = {
-    " \ }
-    "
-    " au User lsp_setup call lsp#register_server({
-    "     \ 'name': 'pyls',
-    "     \ 'cmd': {server_info->['pyls']},
-    "     \ 'whitelist': ['python'],
-    "     \ })
-    " let g:LanguageClient_serverCommands = {
-    "     \ 'python' : ['pyls'],
-    " \}
-" endif
+if executable('pyls')
+  " let g:LanguageClient_serverCommands = {
+  " \ }
+  "
+  " au User lsp_setup call lsp#register_server({
+  "     \ 'name': 'pyls',
+  "     \ 'cmd': {server_info->['pyls']},
+  "     \ 'whitelist': ['python'],
+  "     \ })
+  " let g:LanguageClient_serverCommands = {
+  "     \ 'python' : ['pyls'],
+  " \}
+endif
 
 augroup LanguageClient_config
     autocmd!
