@@ -62,15 +62,16 @@ set encoding=utf-8
 scriptencoding=utf-8
 set number
 set title
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set smartindent
 set softtabstop=0
 set expandtab
 set smarttab
 set shiftround
 set hlsearch
 set showmatch
-set cindent
 set showcmd
 set ignorecase
 set smartcase
