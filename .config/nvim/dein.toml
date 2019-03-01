@@ -4,23 +4,19 @@ hook_add = '''
 source /Users/maedar/dotfiles/.config/nvim/Lightline.rc.vim
 '''
 
-
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
 source /Users/maedar/dotfiles/.config/nvim/NerdTree.rc.vim
 '''
 
-#[[plugins]]
-#repo = 'cohama/lexima.vim'
-
 [[plugins]]
 repo = 'Townk/vim-autoclose'
-hook_add = '''
-  let g:AutoCloseExpandSpace=0
-  "autocmd FileType cpp
-  " \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
-'''
+#hook_add = '''
+#  let g:AutoCloseExpandSpace=0
+#  "autocmd FileType cpp
+#  " \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
+#'''
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
@@ -32,15 +28,21 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = './install.sh'
+#depends = ['deoplete.nvim']
 hook_add = '''
-source /Users/maedar/dotfiles/.config/nvim/Ale.rc.vim
+  set hidden
+  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
+  set completefunc=LanguageClient
 '''
 
 #[[plugins]]
-#repo = 'autozimu/LanguageClient-neovim'
-#rev = 'next'
-#build = 'bash install.sh'
+#repo = 'w0rp/ale'
 #hook_add = '''
-#  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
+#source /Users/maedar/dotfiles/.config/nvim/Ale.rc.vim
 #'''
+
+#[[plugins]]
+#repo = 'cohama/lexima.vim'
