@@ -24,11 +24,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-"htmlのカッコ補完
-"augroup fileTypeIndent
-"    autocmd!
-"    autocmd BufNewFile,BufRead *.html inoremap < <><Left>
-"augroup END
 
 "vimをクリップボード連携
 set clipboard+=unnamed
@@ -37,7 +32,6 @@ set clipboard+=unnamed
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=underline ctermbg=darkRed guibg=darkRed
 endfunction
-
 if has('syntax')
     augroup ZenkakuSpace
         autocmd!

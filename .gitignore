@@ -3,4 +3,6 @@ dotfiles/.config/nvim/dein
 dotfiles/.config/nvim/snippets
 dotfiles/.config/configstore
 dotfiles/.config/fontforge
-
+dein1.txt
+installer.sh
+ttest.cpp
