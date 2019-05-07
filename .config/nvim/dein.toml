@@ -11,11 +11,9 @@ source /Users/maedar/dotfiles/.config/nvim/NerdTree.rc.vim
 '''
 
 [[plugins]]
-repo = 'Townk/vim-autoclose'
+repo = 'cohama/lexima.vim'
 #hook_add = '''
-#  let g:AutoCloseExpandSpace=0
-#  "autocmd FileType cpp
-#  " \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
+#  source /Users/maedar/dotfiles/.config/nvim/lexima.rc.vim
 #'''
 
 [[plugins]]
@@ -33,9 +31,7 @@ rev = 'next'
 build = './install.sh'
 #depends = ['deoplete.nvim']
 hook_add = '''
-  set hidden
   source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
-  set completefunc=LanguageClient
 '''
 
 #[[plugins]]
@@ -43,6 +39,3 @@ hook_add = '''
 #hook_add = '''
 #source /Users/maedar/dotfiles/.config/nvim/Ale.rc.vim
 #'''
-
-#[[plugins]]
-#repo = 'cohama/lexima.vim'

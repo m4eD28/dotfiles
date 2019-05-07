@@ -6,6 +6,7 @@ set runtimepath+=/Users/maedar/.cache/dein/repos/github.com/Shougo/dein.vim
 
 if dein#load_state('/Users/maedar/.cache/dein')
   call dein#begin('/Users/maedar/.cache/dein')
+  " call map(dein#check_clean(), "delete(v:val, 'rf')")
 
   " Let dein manage dein
   call dein#add('/Users/maedar/.cache/dein/repos/github.com/Shougo/dein.vim')
