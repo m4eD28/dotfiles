@@ -1,8 +1,8 @@
 .config/nvim/colors/
-dotfiles/.config/nvim/dein
-dotfiles/.config/nvim/snippets
-dotfiles/.config/configstore/
-dotfiles/.config/fontforge
+.config/nvim/dein
+.config/nvim/snippets
+.config/configstore/
+.config/fontforge
 dein1.txt
 installer.sh
 ttest.cpp
