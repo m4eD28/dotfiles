@@ -1,4 +1,4 @@
-dotfiles/.config/nvim/colors/*
+.config/nvim/colors/
 dotfiles/.config/nvim/dein
 dotfiles/.config/nvim/snippets
 dotfiles/.config/configstore/
