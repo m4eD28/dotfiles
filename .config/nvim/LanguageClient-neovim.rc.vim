@@ -7,6 +7,7 @@ let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
     \ 'python': ['pyls'],
     \ 'py': ['pyls'],
+    \ 'html': ['vscode-html-languageserver']
 \ }
 "au User lsp_setup call lsp#register_server({
 "    \ 'name': 'clangd',
@@ -15,23 +16,23 @@ let g:LanguageClient_serverCommands = {
 "    \ })
 " endif
 
-if executable('pyls')
-  let g:LanguageClient_serverCommands = {
-  \ }
+" if executable('pyls')
+"   let g:LanguageClient_serverCommands = {
+"   \ }
 
-  au User lsp_setup call lsp#register_server({
-      \ 'name': 'pyls',
-      \ 'cmd': {server_info->['pyls']},
-      \ 'whitelist': ['python'],
-      \ 'name': 'clangd',
-      \ 'cmd': {server_info->['clangd']},
-      \ 'whitelist': ['cpp'],
-      \ })
-  let g:LanguageClient_serverCommands = {
-      \ 'python' : ['pyls'],
-      \ 'cpp' : ['clangd'],
-  \}
-endif
+"   au User lsp_setup call lsp#register_server({
+"       \ 'name': 'pyls',
+"       \ 'cmd': {server_info->['pyls']},
+"       \ 'whitelist': ['python'],
+"       \ 'name': 'clangd',
+"       \ 'cmd': {server_info->['clangd']},
+"       \ 'whitelist': ['cpp'],
+"       \ })
+"   let g:LanguageClient_serverCommands = {
+"       \ 'python' : ['pyls'],
+"       \ 'cpp' : ['clangd'],
+"   \}
+" endif
 
 augroup LanguageClient_config
     autocmd!

@@ -41,6 +41,13 @@ if has('syntax')
     call ZenkakuSpace()
 endif
 
+
+"<C-p>でバッファを保存時に開いてるChromeサイトをReload
+command! -bar ChromeReload silent !osascript ~/dotfiles/.config/nvim/apple_script/chrome_reload.applescript
+command! -bar ChromeStartObserve ChromeStopObserve | autocmd BufWritePost <buffer> ChromeReload
+command! -bar ChromeStopObserve autocmd! BufWritePost <buffer>
+nnoremap <silent> <C-p> :ChromeStartObserve<CR>
+
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
 nmap <F5> :!ptex2pdf -l % <Enter>
 nnoremap <C-h> <C-w>h
@@ -53,12 +60,15 @@ vnoremap j gj
 vnoremap k gk
 
 set ruler
+set cursorline
+hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
 set encoding=utf-8
 scriptencoding=utf-8
 set number
 set title
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
 set softtabstop=0

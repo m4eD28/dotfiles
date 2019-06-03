@@ -22,3 +22,12 @@ hook_source = '''
 let g:deoplete#enable_at_startup = 1
 source /Users/maedar/dotfiles/.config/nvim/deoplete.rc.vim
 '''
+
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_source = '''
+  let g:user_emmet_settings = {
+    \ 'lang' : 'ja'
+  \}
+'''
