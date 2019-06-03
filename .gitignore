@@ -3,6 +3,8 @@
 .config/nvim/snippets
 .config/configstore/
 .config/fontforge
+.config/nvim/package-lock.json
+.config/wireshark/
 dein1.txt
 installer.sh
 ttest.cpp
