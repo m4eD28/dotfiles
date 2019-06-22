@@ -33,7 +33,7 @@ endif
 
 
 "vimをクリップボード連携
-set clipboard+=unnamed
+set clipboard=unnamed
 
 "全角スペースhighlight
 function! ZenkakuSpace()
@@ -96,3 +96,4 @@ set noshowmode
 set mouse=a
 set scrolloff=8
 set backspace=indent,eol,start
+set noswapfile
