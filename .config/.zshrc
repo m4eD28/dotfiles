@@ -1,0 +1,1 @@
+/Users/maedar/.zprezto/runcoms/zshrc
