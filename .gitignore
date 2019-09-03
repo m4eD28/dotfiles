@@ -5,6 +5,9 @@
 .config/fontforge
 .config/nvim/package-lock.json
 .config/wireshark/
+.config/fish/
+.config/htop/
+.config/neofetch/
 dein1.txt
 installer.sh
 ttest.cpp
