@@ -22,6 +22,7 @@ if dein#load_state('/Users/maedar/.cache/dein')
 
   call dein#end()
   call dein#save_state()
+  call map(dein#check_clean(), "delete(v:val, 'rf')")
 endif
 
 filetype plugin indent on
@@ -30,6 +31,7 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
 
 
 "vimをクリップボード連携
