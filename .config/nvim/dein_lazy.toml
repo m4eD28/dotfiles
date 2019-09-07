@@ -40,5 +40,7 @@ hook_source = '''
   \}
 '''
 
-# [[plugins]]
-# repo = 'w0rp/ale'
+
+# hook_source = '''
+# source /Users/maedar/dotfiles/.config/nvim/Ale.rc.vim
+# '''
