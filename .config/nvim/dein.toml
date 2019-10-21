@@ -72,6 +72,9 @@ let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_virtual_text_enabled = 1
 let g:lsp_highlights_enabled = 1
+let g:lsp_signs_error = {'text': '✗'}
+let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'}
+let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'}
 
 nnoremap <buffer> <C-]> :<C-u>LspDefinition<CR>
 nnoremap <buffer> gd :<C-u>LspDefinition<CR>
@@ -109,23 +112,30 @@ call asyncomplete#register_source(asyncomplete#sources#neosnippet#get_source_opt
     \ 'whitelist': ['*'],
     \ 'completor': function('asyncomplete#sources#neosnippet#completor'),
     \ }))
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 '''
 
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = '''
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '⨉'
-let g:ale_sign_warning = '⚠'
-let g:ale_linters = {
-  \   'c' : ['clangd'],
-  \   'cpp' : ['clangd'],
-  \   'python': ['flake8']
-\}
-'''
+# [[plugins]]
+# repo = 'w0rp/ale'
+# hook_add = '''
+# let g:ale_sign_column_always = 1
+# let g:ale_sign_error = '⨉'
+# let g:ale_sign_warning = '⚠'
+# let g:ale_linters = {
+#   \   'c' : ['clangd'],
+#   \   'cpp' : ['clangd'],
+#   \   'python': ['flake8']
+# \}
+# '''
+
+# [[plugins]]
+# repo = "jalvesaq/Nvim-R"
+# hook_add = '''
+# let vimrplugin_vsplit = 1
+# let vimrplugin_assign = 0
+# '''
 
 
 #[[plugins]]
