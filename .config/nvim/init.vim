@@ -73,7 +73,7 @@ hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
 set colorcolumn=80
 set encoding=utf-8
 scriptencoding=utf-8
-" set number
+set number
 set title
 set tabstop=2
 set shiftwidth=2
