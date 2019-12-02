@@ -49,7 +49,6 @@ if has('syntax')
   call ZenkakuSpace()
 endif
 
-
 "<C-p>でバッファを保存時に開いてるChromeサイトをReload
 command! -bar ChromeReload silent !osascript ~/dotfiles/.config/nvim/apple_script/chrome_reload.applescript
 command! -bar ChromeStartObserve ChromeStopObserve | autocmd BufWritePost <buffer> ChromeReload

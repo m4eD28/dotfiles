@@ -56,6 +56,7 @@ if executable('clangd')
         \ })
     autocmd FileType c,cpp setlocal omnifunc=lsp#complete
 endif
+
 if executable('pyls')
     autocmd User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
@@ -65,8 +66,8 @@ if executable('pyls')
     autocmd FileType python,py setlocal omnifunc=lsp#complete
 endif
 
-" let g:lsp_log_verbose = 1  " デバッグ用ログを出力
-" let g:lsp_log_file = expand('~/dotfiles/.config/nvim/lsp.log')  "
+let g:lsp_log_verbose = 1  " デバッグ用ログを出力
+let g:lsp_log_file = expand('~/dotfiles/.config/nvim/lsp.log')  "
 
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
@@ -85,7 +86,7 @@ nnoremap <buffer> gQ :<C-u>LspDocumentFormat<CR>
 vnoremap <buffer> gQ :LspDocumentRangeFormat<CR>
 nnoremap <buffer> K :<C-u>LspHover<CR>
 " nnoremap <buffer> <F1> :<C-u>LspImplementation<CR>
-" nnoremap <buffer> <F2> :<C-u>LspRename<CR>
+nnoremap <buffer> <F2> :<C-u>LspRename<CR>
 '''
 
 [[plugins]]
