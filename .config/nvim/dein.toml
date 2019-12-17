@@ -57,6 +57,16 @@ if executable('clangd')
     autocmd FileType c,cpp setlocal omnifunc=lsp#complete
 endif
 
+""if executable('cquery')
+""   au User lsp_setup call lsp#register_server({
+""      \ 'name': 'cquery',
+""      \ 'cmd': {server_info->['cquery']},
+""      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
+""      \ 'initialization_options': { 'cacheDirectory': '/tmp/cquery/cache' },
+""      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
+""      \ })
+""endif
+
 if executable('pyls')
     autocmd User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
@@ -89,13 +99,23 @@ nnoremap <buffer> K :<C-u>LspHover<CR>
 nnoremap <buffer> <F2> :<C-u>LspRename<CR>
 '''
 
-[[plugins]]
-repo='prabirshrestha/asyncomplete.vim'
+# [[plugins]]
+# repo='prabirshrestha/asyncomplete.vim'
+# hook_add =
+# '''
+# inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+# inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+# inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+# autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+# '''
 
 [[plugins]]
 repo='prabirshrestha/asyncomplete-lsp.vim'
 hook_add = '''
 set completeopt-=preview
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 '''
 

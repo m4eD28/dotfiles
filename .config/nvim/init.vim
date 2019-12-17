@@ -31,6 +31,10 @@ if dein#check_install()
   call dein#install()
 endif
 
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
 
 
 "vimをクリップボード連携
@@ -55,6 +59,21 @@ command! -bar ChromeStartObserve ChromeStopObserve | autocmd BufWritePost <buffe
 command! -bar ChromeStopObserve autocmd! BufWritePost <buffer>
 nnoremap <silent> <C-p> :ChromeStartObserve<CR>
 
+" 関数の引数で対応するカッコまで消してくれる
+nnoremap dm) vmzi)o`zod
+
+" F3でnumber <-> relativenumber
+nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
+
+" space 二回でその単語をハイライト
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+
+" 空行挿入
+imap <Down> <End><CR>
+imap <Up> <Up><End><CR>
+nnoremap <Down> mzo<ESC>`z
+nnoremap <Up> mzO<ESC>`z
+
 nmap <silent> <Esc><Esc> :nohlsearch<CR>
 nmap <F5> :!ptex2pdf -l % <Enter>
 nnoremap <C-h> <C-w>h
@@ -65,14 +84,23 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+" 行を移動
+nnoremap <S-Up> "zdd<Up>"zP
+nnoremap <S-Down> "zdd"zp
+" 複数行を移動
+vnoremap <S-Up> "zx<Up>"zP`[V`]
+vnoremap <S-Down> "zx"zp`[V`]
+vnoremap < <gv
+vnoremap > >gv
 
+hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
+scriptencoding=utf-8
 set ruler
 set cursorline
-hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
 set colorcolumn=80
 set encoding=utf-8
-scriptencoding=utf-8
 set number
+set relativenumber
 set title
 set tabstop=2
 set shiftwidth=2
@@ -94,7 +122,6 @@ set nowrapscan
 set incsearch
 set nobackup
 set noshowmode
-set mouse=a
 set scrolloff=8
 set backspace=indent,eol,start
 set noswapfile
