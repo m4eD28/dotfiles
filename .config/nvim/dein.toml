@@ -77,7 +77,6 @@ if executable('pyls')
 endif
 
 ""let g:lsp_log_verbose = 1  " デバッグ用ログを出力
-let g:lsp_log_verbose = 1  " デバッグ用ログを出力
 let g:lsp_log_file = expand('~/dotfiles/.config/nvim/lsp.log')  "
 
 let g:lsp_diagnostics_enabled = 1
@@ -100,15 +99,15 @@ nnoremap <buffer> K :<C-u>LspHover<CR>
 nnoremap <buffer> <F2> :<C-u>LspRename<CR>
 '''
 
-# [[plugins]]
-# repo='prabirshrestha/asyncomplete.vim'
-# hook_add =
-# '''
-# inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-# inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-# inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-# autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-# '''
+[[plugins]]
+repo='prabirshrestha/asyncomplete.vim'
+hook_add =
+'''
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+'''
 
 [[plugins]]
 repo='prabirshrestha/asyncomplete-lsp.vim'
