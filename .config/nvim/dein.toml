@@ -57,6 +57,7 @@ if executable('clangd')
     autocmd FileType c,cpp setlocal omnifunc=lsp#complete
 endif
 
+<<<<<<< HEAD
 ""if executable('cquery')
 ""   au User lsp_setup call lsp#register_server({
 ""      \ 'name': 'cquery',
@@ -67,6 +68,8 @@ endif
 ""      \ })
 ""endif
 
+=======
+>>>>>>> d088a0d94660e8c2f3c2eab281f1e31e386933e1
 if executable('pyls')
     autocmd User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
@@ -76,7 +79,11 @@ if executable('pyls')
     autocmd FileType python,py setlocal omnifunc=lsp#complete
 endif
 
+<<<<<<< HEAD
 ""let g:lsp_log_verbose = 1  " デバッグ用ログを出力
+=======
+let g:lsp_log_verbose = 1  " デバッグ用ログを出力
+>>>>>>> d088a0d94660e8c2f3c2eab281f1e31e386933e1
 let g:lsp_log_file = expand('~/dotfiles/.config/nvim/lsp.log')  "
 
 let g:lsp_diagnostics_enabled = 1
@@ -113,9 +120,12 @@ nnoremap <buffer> <F2> :<C-u>LspRename<CR>
 repo='prabirshrestha/asyncomplete-lsp.vim'
 hook_add = '''
 set completeopt-=preview
+<<<<<<< HEAD
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+=======
+>>>>>>> d088a0d94660e8c2f3c2eab281f1e31e386933e1
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 '''
 
@@ -166,6 +176,7 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 ##depends = ['deoplete.nvim']
 #hook_add = '''
 #  source /Users/maedar/dotfiles/.config/nvim/LanguageClient-neovim.rc.vim
+<<<<<<< HEAD
 #'''
 
 #[[plugins]]
@@ -173,6 +184,15 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 #hook_add = '''
 #  let g:vim_markdown_folding_disabled = 1
 #'''
+=======
+#'''
+
+#[[plugins]]
+#repo = 'plasticboy/vim-markdown'
+#hook_add = '''
+#  let g:vim_markdown_folding_disabled = 1
+#'''
+>>>>>>> d088a0d94660e8c2f3c2eab281f1e31e386933e1
 #
 #[[plugins]]
 #repo = 'kannokanno/previm'
