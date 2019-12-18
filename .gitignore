@@ -1,6 +1,7 @@
 .config/nvim/colors/
 .config/nvim/dein
 .config/nvim/snippets
+.config/nvim/lsp.log
 .config/configstore/
 .config/fontforge
 .config/nvim/package-lock.json
@@ -11,6 +12,3 @@
 dein1.txt
 installer.sh
 test.cpp
-<<<<<<< HEAD
-=======
->>>>>>> d088a0d94660e8c2f3c2eab281f1e31e386933e1
