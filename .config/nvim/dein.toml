@@ -76,7 +76,7 @@ if executable('pyls')
     autocmd FileType python,py setlocal omnifunc=lsp#complete
 endif
 
-let g:lsp_log_verbose = 1  " デバッグ用ログを出力
+""let g:lsp_log_verbose = 1  " デバッグ用ログを出力
 let g:lsp_log_file = expand('~/dotfiles/.config/nvim/lsp.log')  "
 
 let g:lsp_diagnostics_enabled = 1
